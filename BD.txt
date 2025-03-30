@@ -1,0 +1,14 @@
+from myapp.moddels import Project, Task   PARA IMPORTAR LAS CLASES DE LOS MODELOS DESDE MYAPP
+
+>>> p=Project(name="AplicacionWeb")    PARA GUARDAR EL NUEVO DATO EN p
+>>> p.save()		PARA GRABAR
+
+Project.objects.all()		para ver todos los objetos guardados en Project
+
+Project.objects.get(id=1)		PARA HACER CONSULTA
+
+p.task_set.all()  		PARA VER LOS OBJETOS EN task DEPENDIENTE DE p
+
+p.task_set.create(title="descargar IDE")		PARA CREAR OBJETO EN task 
+
+Project.objects.filter(name__startswith="aplicacion") 		PARA HACER CONSULTA CON FILTROS
